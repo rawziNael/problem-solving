@@ -27,7 +27,12 @@
 // -------------------------------------------------------------------------------------------------------
 
 const customerAndAge = (obj) => {
-  // write your code here
+  var array = [];
+  for (const [key, value] of Object.entries(obj)) {
+    array.push(`CustomerName: ${key} , Age: ${value}`);
+  }
+  return array;
+
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -54,7 +59,12 @@ const customerAndAge = (obj) => {
 // -------------------------------------------------------------------------------------------------------
 
 const getEntries = (obj) => {
-  // write your code here
+  var array = [];
+  for (const [key, value] of Object.entries(obj)) {
+      array.push(`${key}: ${value}`);
+  }
+  return array;
+console.log(getEntries(obj));
 };
 
 // -------------------------------------------------------------------------------------------------------
