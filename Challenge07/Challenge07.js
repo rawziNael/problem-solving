@@ -84,7 +84,6 @@ const objLat = (obj) => {
 
 // ------------------------
 const cvFormatter = (arr) => {
-
     let newArr = []
     for (let i = 0; i < arr.length; i++) {
         let full = '';
@@ -103,7 +102,7 @@ const cvFormatter = (arr) => {
 
         }
     }
-    console.log(newArr)
+    return newArr;
 }
 
 // 3) ---------------------
