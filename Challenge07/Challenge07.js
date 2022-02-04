@@ -84,26 +84,24 @@ const objLat = (obj) => {
 
 // ------------------------
 const cvFormatter = (arr) => {
-
     let newArr = []
     for (let i = 0; i < arr.length; i++) {
         let full = '';
         if (arr[i].yearsOfExperience > 1) {
-            if (arr[i].LastName != null) {
-                full = arr[i].firstName + ' ' + arr[i].LastName
+            if (arr[i].lastName != null) {
+                full = arr[i].firstName + ' ' + arr[i].lastName;
             }
             else {
-                full = arr[i].firstName
+                full = arr[i].firstName;
             }
             delete arr[i].firstName;
-            delete arr[i].LastName;
+            delete arr[i].lastName;
             delete arr[i].yearsOfExperience;
-            const startAdded = { 'fullName': full, ...arr[i] };
-            newArr.push(startAdded)
-
+            const startAdded = {'fullName': full ,  ...arr[i]};
+            newArr.push(startAdded);
         }
     }
-    console.log(newArr)
+    return newArr;
 }
 
 // 3) ---------------------
